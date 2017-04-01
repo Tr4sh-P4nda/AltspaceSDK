@@ -2906,6 +2906,10 @@ var NLayoutBrowser = (function (NativeComponent$$1) {
 			isEnclosure: { default: false }
 		};
 	};
+	NLayoutBrowser.prototype.update = function update (){
+		this.data.is3d = this.data.isEnclosure;
+		altspace.updateNativeComponent(this.el.object3DMap.mesh, this.name, this.data);
+	};
 
 	Object.defineProperties( NLayoutBrowser.prototype, prototypeAccessors );
 

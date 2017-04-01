@@ -32,6 +32,10 @@ class NLayoutBrowser extends NativeComponent
 			isEnclosure: { default: false }
 		};
 	}
+	update(){
+		this.data.is3d = this.data.isEnclosure;
+		altspace.updateNativeComponent(this.el.object3DMap.mesh, this.name, this.data);
+	}
 }
 
 export default NLayoutBrowser;
